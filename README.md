@@ -3,53 +3,7 @@
 A static, fan-made archive of memories that never quite faded — built with plain
 HTML, CSS and JavaScript. No frameworks, no build step, no dependencies.
 
-> An unofficial, non-commercial creative project. Inspired by the aesthetic of winter,
-> adolescence and analog recording. Not affiliated with, endorsed by, or connected to
-> ADOR, HYBE or NewJeans. No music-video frames, artist photographs, lyrics, logos or
-> official artwork appear anywhere in this project.
-
----
-
-## Run it
-
-Open `index.html` directly in a browser — double-click the file, or:
-
-```powershell
-start index.html
-```
-
-No server, no install, no network access required. The only external request is the
-Google Fonts stylesheet; if it is unavailable the site falls back to system serif,
-sans and cursive fonts and still works completely.
-
-Optional local server (identical result, useful for testing):
-
-```powershell
-python -m http.server 8123
-# then visit http://127.0.0.1:8123/
-```
-
----
-
-## Files
-
-```text
-winter-tape-club/
-├─ index.html              all six sections, single page
-├─ credits.html            attribution for the 16 photographs
-├─ css/
-│  └─ style.css            design tokens, layout, components, responsive, reduced motion
-├─ js/
-│  └─ script.js            nav, tape counter, scroll spy, A/B deck, lightbox, note machine
-├─ assets/
-│  ├─ favicon.svg
-│  └─ images/              16 optimised JPEGs (max 1500px wide, q82)
-└─ README.md
-```
-
-Total page weight: ~1.7 MB of imagery, ~46 KB of CSS, ~14 KB of JS.
-
----
+> An unofficial, non-commercial creative project. Inspired by the aesthetic of NewJeans
 
 ## Sections
 
