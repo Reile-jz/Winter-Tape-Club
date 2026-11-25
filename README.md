@@ -4,6 +4,7 @@ A static, fan-made archive of memories that never quite faded — built with pla
 HTML, CSS and JavaScript. No frameworks, no build step, no dependencies.
 
 > An unofficial, non-commercial creative project. Inspired by the aesthetic of NewJeans
+> A test of the front end capability of my OpenCode Setup!
 
 ## Sections
 
