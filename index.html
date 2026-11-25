@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Winter Tape Club — a little archive of memories that never really faded. An unofficial fan-made dreamcore project.">
+  <meta name="theme-color" content="#e6edf2">
+  <title>Winter Tape Club — A Little Archive of Memories</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#archive">Skip to the archive</a>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__mark" aria-label="WTC est. 2022, Winter Tape Club, back to top">
+        <span class="nav__mark-dot" aria-hidden="true"></span>
+        <span class="nav__mark-text">WTC</span>
+        <span class="nav__mark-sub">est. 2022</span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" type="button"
+              aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Sections">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home"><span class="nav__link-num">00</span>Home</a></li>
+          <li><a class="nav__link" href="#archive"><span class="nav__link-num">01</span>Archive</a></li>
+          <li><a class="nav__link" href="#sides"><span class="nav__link-num">02</span>Side A / B</a></li>
+          <li><a class="nav__link" href="#dreamboard"><span class="nav__link-num">03</span>Dream Board</a></li>
+          <li><a class="nav__link" href="#letters"><span class="nav__link-num">04</span>Letters</a></li>
+        </ul>
+      </nav>
+
+      <p class="nav__status" aria-live="polite">
+        <span class="nav__status-dot" aria-hidden="true"></span>
+        <span class="nav__status-label">TAPE&nbsp;—</span>
+        <span class="nav__status-value" id="tape-counter">00:00:00</span>
+      </p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════════ 01 · HERO ═══════════════ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__img" src="assets/images/hero-corridor.jpg" alt="" decoding="async" fetchpriority="high">
+        <div class="hero__veil"></div>
+      </div>
+
+      <div class="hero__viewfinder" aria-hidden="true">
+        <span class="vf__corner vf__corner--tl"></span>
+        <span class="vf__corner vf__corner--tr"></span>
+        <span class="vf__corner vf__corner--bl"></span>
+        <span class="vf__corner vf__corner--br"></span>
+        <span class="vf__centre vf__centre--h"></span>
+        <span class="vf__centre vf__centre--v"></span>
+
+        <div class="vf__hud vf__hud--tl">
+          <span class="rec"><span class="rec__dot"></span>REC</span>
+        </div>
+        <div class="vf__hud vf__hud--tr">
+          <span class="tape-label">SP · Hi8</span>
+        </div>
+        <div class="vf__hud vf__hud--bl">
+          <span class="timestamp" id="hero-timestamp">01:23:45</span>
+        </div>
+        <div class="vf__hud vf__hud--br">
+          <span class="battery"><span class="battery__level"></span></span>
+        </div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__kicker">
+          <span class="hero__kicker-line" aria-hidden="true"></span>
+          An unofficial fan archive
+        </p>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__title-line">Winter</span>
+          <span class="hero__title-line hero__title-line--offset">Tape Club</span>
+        </h1>
+
+        <p class="hero__lede">
+          Some memories feel like they happened yesterday.
+          <em>Others feel like a dream.</em>
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#archive">
+            <span>Enter the archive</span>
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+          <p class="hero__meta">
+            <span>06 memories</span>
+            <span aria-hidden="true">/</span>
+            <span>winter 2022 — 2025</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__notes" aria-hidden="true">
+        <span class="hand hero__note hero__note--1">first snow, 2:14am</span>
+        <span class="hand hero__note hero__note--2">don't forget this one</span>
+        <span class="hand hero__note hero__note--3">rewind →</span>
+      </div>
+
+      <a class="hero__scroll" href="#archive" aria-label="Scroll to the memory archive">
+        <span class="hero__scroll-text">scroll</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ═══════════════ TICKER ═══════════════ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span class="ticker__item">Winter Tape Club</span><span class="ticker__star">✳</span>
+        <span class="ticker__item">Memories in cold storage</span><span class="ticker__star">✳</span>
+        <span class="ticker__item">Rewind with care</span><span class="ticker__star">✳</span>
+        <span class="ticker__item">Side A / Side B</span><span class="ticker__star">✳</span>
+        <span class="ticker__item">Winter Tape Club</span><span class="ticker__star">✳</span>
+        <span class="ticker__item">Memories in cold storage</span><span class="ticker__star">✳</span>
+        <span class="ticker__item">Rewind with care</span><span class="ticker__star">✳</span>
+        <span class="ticker__item">Side A / Side B</span><span class="ticker__star">✳</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════ 02 · THE MEMORY ARCHIVE ═══════════════ -->
+    <section class="archive section" id="archive" aria-labelledby="archive-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="section-index"><span aria-hidden="true">01</span> — the collection</p>
+          <h2 class="section-title" id="archive-title">The Memory<br><em>Archive</em></h2>
+          <p class="section-lede">
+            Six tapes pulled from a shoebox under the bed. None of them are labelled
+            properly. All of them are dated in someone's handwriting.
+          </p>
+        </header>
+
+        <ol class="archive__grid" role="list">
+          <li class="memory memory--wide">
+            <article class="memory__card">
+              <button class="memory__frame" type="button" data-gallery="0" aria-label="Open memory: Tape 01, After School">
+                <img class="memory__img" src="assets/images/after-school.jpg" alt="Empty classroom at golden hour, winter sunlight across wooden desks" loading="lazy" decoding="async">
+                <span class="memory__scan" aria-hidden="true"></span>
+                <span class="memory__stamp">TAPE 01</span>
+                <span class="memory__zoom" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21M11 8v6M8 11h6"/></svg>
+                </span>
+              </button>
+              <div class="memory__body">
+                <div class="memory__meta">
+                  <span class="memory__label">After School</span>
+                  <time class="memory__time" datetime="2022-12-15T15:42">15:42 · 15 Dec</time>
+                </div>
+                <p class="memory__caption">
+                  The way the light pooled on the desks at ten past three.
+                  We stayed until the caretaker started switching the lights off, one row at a time.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li class="memory memory--tall">
+            <article class="memory__card">
+              <button class="memory__frame" type="button" data-gallery="1" aria-label="Open memory: Tape 02, December Skies">
+                <img class="memory__img" src="assets/images/december-skies.jpg" alt="Pale winter sky with thin clouds and bare branches" loading="lazy" decoding="async">
+                <span class="memory__scan" aria-hidden="true"></span>
+                <span class="memory__stamp">TAPE 02</span>
+                <span class="memory__zoom" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21M11 8v6M8 11h6"/></svg>
+                </span>
+              </button>
+              <div class="memory__body">
+                <div class="memory__meta">
+                  <span class="memory__label">December Skies</span>
+                  <time class="memory__time" datetime="2022-12-24T09:15">09:15 · 24 Dec</time>
+                </div>
+                <p class="memory__caption">
+                  That particular blue that only turns up in winter. We named it after you
+                  and then forgot, and then remembered again months later.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li class="memory memory--small">
+            <article class="memory__card">
+              <button class="memory__frame" type="button" data-gallery="2" aria-label="Open memory: Tape 03, The Empty Hallway">
+                <img class="memory__img" src="assets/images/empty-hallway.jpg" alt="Long empty school corridor lined with pale blue lockers" loading="lazy" decoding="async">
+                <span class="memory__scan" aria-hidden="true"></span>
+                <span class="memory__stamp">TAPE 03</span>
+                <span class="memory__zoom" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21M11 8v6M8 11h6"/></svg>
+                </span>
+              </button>
+              <div class="memory__body">
+                <div class="memory__meta">
+                  <span class="memory__label">The Empty Hallway</span>
+                  <time class="memory__time" datetime="2023-01-08T16:03">16:03 · 08 Jan</time>
+                </div>
+                <p class="memory__caption">
+                  Footsteps sound different when nobody else is there. The lockers held
+                  things we never said out loud.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li class="memory memory--small">
+            <article class="memory__card">
+              <button class="memory__frame" type="button" data-gallery="3" aria-label="Open memory: Tape 04, Bicycle Memories">
+                <img class="memory__img" src="assets/images/bicycle.jpg" alt="Old bicycle leaning against a fence on a snowy street at dusk" loading="lazy" decoding="async">
+                <span class="memory__scan" aria-hidden="true"></span>
+                <span class="memory__stamp">TAPE 04</span>
+                <span class="memory__zoom" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21M11 8v6M8 11h6"/></svg>
+                </span>
+              </button>
+              <div class="memory__body">
+                <div class="memory__meta">
+                  <span class="memory__label">Bicycle Memories</span>
+                  <time class="memory__time" datetime="2022-11-30T17:21">17:21 · 30 Nov</time>
+                </div>
+                <p class="memory__caption">
+                  Racing home before the streetlights came on. Cold air in our lungs,
+                  and the feeling that the whole evening belonged to us.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li class="memory memory--wide">
+            <article class="memory__card">
+              <button class="memory__frame" type="button" data-gallery="4" aria-label="Open memory: Tape 05, Last Winter">
+                <img class="memory__img" src="assets/images/last-winter.jpg" alt="Snow-covered empty playground with a swing set at dusk" loading="lazy" decoding="async">
+                <span class="memory__scan" aria-hidden="true"></span>
+                <span class="memory__stamp">TAPE 05</span>
+                <span class="memory__zoom" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21M11 8v6M8 11h6"/></svg>
+                </span>
+              </button>
+              <div class="memory__body">
+                <div class="memory__meta">
+                  <span class="memory__label">Last Winter</span>
+                  <time class="memory__time" datetime="2023-02-14T18:07">18:07 · 14 Feb</time>
+                </div>
+                <p class="memory__caption">
+                  Nothing happened, which is exactly why it stayed. The last ordinary
+                  afternoon before everything quietly rearranged itself.
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <li class="memory memory--wide memory--end">
+            <article class="memory__card">
+              <button class="memory__frame" type="button" data-gallery="5" aria-label="Open memory: Tape 06, Things We Never Said">
+                <img class="memory__img" src="assets/images/unsaid.jpg" alt="Open notebook with handwriting on a windowsill beside frosted glass" loading="lazy" decoding="async">
+                <span class="memory__scan" aria-hidden="true"></span>
+                <span class="memory__stamp">TAPE 06</span>
+                <span class="memory__zoom" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21M11 8v6M8 11h6"/></svg>
+                </span>
+              </button>
+              <div class="memory__body">
+                <div class="memory__meta">
+                  <span class="memory__label">Things We Never Said</span>
+                  <time class="memory__time" datetime="2023-03-01T20:15">20:15 · 01 Mar</time>
+                </div>
+                <p class="memory__caption">
+                  Words that stayed in our throats. Confessions written in the margins
+                  of a diary and never posted. Still here, somehow.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ol>
+
+        <p class="archive__foot hand">— six of forty-one. the rest are still in the box.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 03 · SIDE A / SIDE B ═══════════════ -->
+    <section class="sides section" id="sides" aria-labelledby="sides-title">
+      <div class="wrap">
+        <header class="section-head section-head--centre">
+          <p class="section-index"><span aria-hidden="true">02</span> — same tape, two readings</p>
+          <h2 class="section-title" id="sides-title">Side A / <em>Side B</em></h2>
+          <p class="section-lede">
+            One side recorded it. The other side remembers it. They are not quite the same
+            tape, even though the tape is the same.
+          </p>
+        </header>
+
+        <div class="deck">
+          <div class="deck__tabs" role="tablist" aria-label="Choose a side of the tape">
+            <button class="deck__tab deck__tab--active" id="tab-a" type="button" role="tab"
+                    aria-selected="true" aria-controls="panel-a" tabindex="0">
+              <span class="deck__tab-side">Side A</span>
+              <span class="deck__tab-name">The Recording</span>
+              <span class="deck__tab-when">winter 2022</span>
+            </button>
+            <button class="deck__tab" id="tab-b" type="button" role="tab"
+                    aria-selected="false" aria-controls="panel-b" tabindex="-1">
+              <span class="deck__tab-side">Side B</span>
+              <span class="deck__tab-name">The Memory</span>
+              <span class="deck__tab-when">winter 2025</span>
+            </button>
+            <span class="deck__thumb" aria-hidden="true"></span>
+          </div>
+
+          <div class="deck__stage">
+            <!-- SIDE A -->
+            <div class="panel panel--a panel--active" id="panel-a" role="tabpanel"
+                 aria-labelledby="tab-a" tabindex="0">
+              <figure class="panel__figure">
+                <img class="panel__img" src="assets/images/side-a.jpg" alt="Warm sunlight falling in long shafts along a school corridor" loading="lazy" decoding="async">
+                <span class="panel__frame" aria-hidden="true"></span>
+                <span class="panel__hud" aria-hidden="true">REC · 47 MIN · Hi8</span>
+                <figcaption class="panel__figcap hand">nobody knew the camera was still on</figcaption>
+              </figure>
+              <div class="panel__text">
+                <p class="panel__eyebrow">Side A — the recording</p>
+                <h3 class="panel__heading">We were only ever<br><em>filming forward.</em></h3>
+                <p>
+                  The camera is heavy in your hands, and the strap leaves a mark on your wrist.
+                  You film the corridor because it is there, because the light is doing something
+                  you can't explain, because your friends are laughing two steps ahead and you
+                  want to keep the sound of it.
+                </p>
+                <p>
+                  Nothing is a memory yet. This is just a Tuesday. The tape runs out in
+                  forty-seven minutes and you will forget all of it by spring.
+                </p>
+                <dl class="panel__specs">
+                  <div><dt>Recorded</dt><dd>Dec 2022</dd></div>
+                  <div><dt>Format</dt><dd>Hi8 / SP</dd></div>
+                  <div><dt>Runtime</dt><dd>47 min</dd></div>
+                </dl>
+              </div>
+            </div>
+
+            <!-- SIDE B -->
+            <div class="panel panel--b" id="panel-b" role="tabpanel"
+                 aria-labelledby="tab-b" tabindex="0" hidden>
+              <figure class="panel__figure">
+                <img class="panel__img" src="assets/images/side-b.jpg" alt="Empty corridor in deep winter with frost covering the windows" loading="lazy" decoding="async">
+                <span class="panel__frame" aria-hidden="true"></span>
+                <span class="panel__hud" aria-hidden="true">PLAY · PAUSED · 2025</span>
+                <figcaption class="panel__figcap hand">the same corridor. no laughing now.</figcaption>
+              </figure>
+              <div class="panel__text">
+                <p class="panel__eyebrow">Side B — the memory</p>
+                <h3 class="panel__heading">The tape didn't change.<br><em>You did.</em></h3>
+                <p>
+                  Everything has gone cold and quiet. The windows have frosted over until the
+                  outside world looks like a photograph of itself. You keep the tape paused
+                  on a single frame where someone is half-turned, about to say something.
+                </p>
+                <p>
+                  You are watching yourself watch them. The distance between then and now is
+                  measured in how long you can hold the pause button before it starts to hurt.
+                </p>
+                <dl class="panel__specs">
+                  <div><dt>Viewed</dt><dd>Dec 2025</dd></div>
+                  <div><dt>Format</dt><dd>digital transfer</dd></div>
+                  <div><dt>Runtime</dt><dd>indefinite</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 04 · THE DREAM BOARD ═══════════════ -->
+    <section class="board section" id="dreamboard" aria-labelledby="board-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="section-index"><span aria-hidden="true">03</span> — loose pages</p>
+          <h2 class="section-title" id="board-title">The Dream<br><em>Board</em></h2>
+          <p class="section-lede">
+            Everything pinned to the wall above the desk. Nothing is finished, nothing is
+            arranged, everything means something to someone.
+          </p>
+        </header>
+
+        <div class="board__stage">
+          <figure class="board__item board__item--a">
+            <img class="board__img" src="assets/images/board-sky.jpg" alt="Towering white clouds above dark silhouetted trees" loading="lazy" decoding="async">
+            <figcaption class="hand">clouds that looked like snow</figcaption>
+          </figure>
+
+          <figure class="board__item board__item--b">
+            <img class="board__img" src="assets/images/board-camera.jpg" alt="Vintage camcorder beside a stack of tapes on a desk" loading="lazy" decoding="async">
+            <figcaption class="hand">found at the market, £8</figcaption>
+          </figure>
+
+          <figure class="board__item board__item--c">
+            <img class="board__img" src="assets/images/board-window.jpg" alt="Close-up of frost patterns on a snowy window" loading="lazy" decoding="async">
+            <figcaption class="hand">breath on glass</figcaption>
+          </figure>
+
+          <figure class="board__item board__item--d">
+            <img class="board__img" src="assets/images/board-field.jpg" alt="Snowy field at dawn with a low line of bare trees" loading="lazy" decoding="async">
+            <figcaption class="hand">the field behind the school</figcaption>
+          </figure>
+
+          <figure class="board__item board__item--e">
+            <img class="board__img" src="assets/images/board-fog.jpg" alt="Bare trees standing in blue winter fog" loading="lazy" decoding="async">
+            <figcaption class="hand">the walk home, 4:40pm</figcaption>
+          </figure>
+
+          <figure class="board__item board__item--f">
+            <img class="board__img" src="assets/images/board-notes.jpg" alt="Handwritten message filling the back of an old postcard" loading="lazy" decoding="async">
+            <figcaption class="hand">things to remember</figcaption>
+          </figure>
+
+          <figure class="board__item board__item--g">
+            <img class="board__img" src="assets/images/board-bike.jpg" alt="Bicycle half-buried in fresh snow, black and white" loading="lazy" decoding="async">
+            <figcaption class="hand">rode this until the snow</figcaption>
+          </figure>
+
+          <p class="board__quote">
+            <span class="board__quote-mark" aria-hidden="true">“</span>
+            In another version of this winter, we never left.
+          </p>
+
+          <p class="board__aside hand">(this whole wall is a lie. i was never this sentimental.)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ 05 · LETTERS TO THE PAST ═══════════════ -->
+    <section class="letters section" id="letters" aria-labelledby="letters-title">
+      <div class="wrap">
+        <header class="section-head section-head--centre">
+          <p class="section-index"><span aria-hidden="true">04</span> — unsent</p>
+          <h2 class="section-title" id="letters-title">Letters to<br><em>the Past</em></h2>
+          <p class="section-lede">
+            Written on the back of receipts, inside book covers, in the last pages of a
+            notebook. Never posted. Kept anyway.
+          </p>
+        </header>
+
+        <div class="letters__grid">
+          <article class="note note--1">
+            <span class="note__tape" aria-hidden="true"></span>
+            <p class="note__text hand">Some days I wish I could rewind.</p>
+            <p class="note__date">Dec 2023</p>
+          </article>
+
+          <article class="note note--2">
+            <span class="note__tape" aria-hidden="true"></span>
+            <p class="note__text hand">We didn't know those moments would become memories.</p>
+            <p class="note__date">Jan 2024</p>
+          </article>
+
+          <article class="note note--3">
+            <span class="note__tape" aria-hidden="true"></span>
+            <p class="note__text hand">Maybe growing up just means learning how to miss things.</p>
+            <p class="note__date">Feb 2024</p>
+          </article>
+        </div>
+
+        <div class="letters__machine">
+          <div class="letters__machine-head">
+            <p class="letters__machine-label">Unsorted notes</p>
+            <p class="letters__machine-hint hand">press the key, see what comes up</p>
+          </div>
+
+          <button class="key" id="note-btn" type="button" aria-describedby="note-out">
+            <span class="key__top">
+              <span class="key__label">Retrieve a note</span>
+              <span class="key__sub">random access</span>
+            </span>
+            <span class="key__side" aria-hidden="true"></span>
+          </button>
+
+          <div class="letters__out" id="note-out" role="status" aria-live="polite">
+            <p class="letters__out-prompt hand" id="note-prompt">the drawer is closed.</p>
+            <blockquote class="letters__out-text" id="note-text" hidden></blockquote>
+            <p class="letters__out-meta" id="note-meta" hidden></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════ 06 · FOOTER ═══════════════ -->
+  <footer class="footer" aria-labelledby="footer-title">
+    <div class="wrap">
+      <div class="footer__reel" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <h2 class="footer__end" id="footer-title">End of tape.</h2>
+      <p class="footer__farewell hand">Until we meet again.</p>
+
+      <div class="footer__grid">
+        <nav class="footer__nav" aria-label="Footer">
+          <h3 class="footer__nav-title">Sections</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#archive">The archive</a></li>
+            <li><a href="#sides">Side A / B</a></li>
+            <li><a href="#dreamboard">Dream board</a></li>
+            <li><a href="#letters">Letters</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h3 class="footer__nav-title">The tape</h3>
+          <p>Winter Tape Club<br>Volume I · 2022—2025<br>Hi8 · 47 minutes</p>
+        </div>
+
+        <div class="footer__col footer__col--wide">
+          <h3 class="footer__nav-title">Disclaimer</h3>
+          <p>
+            An unofficial, non-commercial fan-made creative project. Inspired by the
+            aesthetic of winter, adolescence and analog recording. Not affiliated with,
+            endorsed by, or connected to ADOR, HYBE or NewJeans. No music video frames,
+            artist photographs, lyrics, logos or official artwork are reproduced here.
+            Photography is used under Creative Commons licences with full credit on the
+            <a href="credits.html">credits page</a>; all written copy is original.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__base">
+        <p>© <span id="year">2026</span> Winter Tape Club — a little archive of memories that never really faded.</p>
+        <p class="footer__base-note"><a href="credits.html">Image credits →</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ LIGHTBOX ═══════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__panel" role="document">
+      <button class="lightbox__close" type="button" data-close aria-label="Close image viewer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <button class="lightbox__nav lightbox__nav--prev" type="button" id="lb-prev" aria-label="Previous memory">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" id="lb-img" src="" alt="">
+      </figure>
+
+      <button class="lightbox__nav lightbox__nav--next" type="button" id="lb-next" aria-label="Next memory">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <div class="lightbox__info">
+        <div class="lightbox__info-head">
+          <h3 class="lightbox__title" id="lb-title"></h3>
+          <p class="lightbox__count" id="lb-count"></p>
+        </div>
+        <p class="lightbox__caption" id="lb-caption"></p>
+        <p class="lightbox__time" id="lb-time"></p>
+      </div>
+    </div>
+  </div>
+
+  <noscript>
+    <style>
+      .panel[hidden] { display: block !important; }
+      .deck__tabs, .nav__toggle { display: none !important; }
+      .panel + .panel { margin-top: 4rem; }
+    </style>
+  </noscript>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

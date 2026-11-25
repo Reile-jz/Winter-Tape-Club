@@ -1,0 +1,16 @@
+﻿hero-corridor.jpg	corridor#7
+after-school.jpg	classroom2#1
+december-skies.jpg	sky#2
+empty-hallway.jpg	corridor#6
+bicycle.jpg	bicycle#9
+last-winter.jpg	playground#12
+unsaid.jpg	notebook#2
+side-a.jpg	playground#3
+side-b.jpg	lockers#10
+board-sky.jpg	sky#9
+board-camera.jpg	photos#3
+board-window.jpg	frost#10
+board-notes.jpg	notebook#5
+board-field.jpg	field#5
+board-fog.jpg	field#7
+board-bike.jpg	bicycle#12
