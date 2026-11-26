@@ -72,7 +72,7 @@ HTML, CSS and JavaScript. No frameworks, no build step, no dependencies.
 ## Photography
 
 All 16 photographs are used under Creative Commons licences (CC BY 2.0 / CC BY-SA
-2.0) with full attribution on [`credits.html`](credits.html). They were downloaded
+2.0) with full attribution on image credits at the bottom right). They were downloaded
 from Flickr, resized to a maximum of 1500 px wide and re-encoded at JPEG quality 82.
 
 No frame, still, logo, album cover or lyric from any music video appears in this
