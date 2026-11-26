@@ -94,7 +94,7 @@ Total page weight: ~1.7 MB of imagery, ~46 KB of CSS, ~14 KB of JS.
 - The lightbox is a labelled `role="dialog"` with `aria-modal="true"` and a focus trap.
 - Contrast is kept high for body copy (charcoal `#1b222a` on off-white `#f5f2ec`);
   the low-contrast silver tones are used only for decorative metadata.
-- `prefers-reduced-motion: reduce` stops the ticker marquee, the blinking REC dots,
+- `prefers-reduced-motion: reduce` stops the blinking REC dots,
   the scroll cue, all card rotation and every transition/animation.
 - No horizontal overflow at 320, 390, 768, 1024 or 1440 px.
 
@@ -111,7 +111,7 @@ Total page weight: ~1.7 MB of imagery, ~46 KB of CSS, ~14 KB of JS.
   All of it is cheap: one tiled SVG noise, one repeating gradient, no filters on
   scroll, no canvas, no WebGL.
 - **Motion** — transform/opacity only, 300–900 ms, single-pass; nothing animates
-  continuously except the marquee and two blinking dots.
+  continuously except the two blinking dots.
 
 ---
 
